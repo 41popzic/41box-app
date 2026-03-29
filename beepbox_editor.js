@@ -18421,7 +18421,7 @@ li.select2-results__option[role=group] > strong:hover {
     Song._latestUltraBoxVersion = 5;
     Song._oldestSlarmoosBoxVersion = 1;
     Song._latestSlarmoosBoxVersion = 5;
-    Song._variant = 0x73;
+    Song._variant = 0x70;
     class PickedString {
         constructor() {
             this.delayLine = null;
