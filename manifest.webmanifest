@@ -1,7 +1,7 @@
 {
-	"name": "Slarmoo's Box",
-	"short_name": "Slarmoo's Box",
-	"description": "Slarmoo's Box is a mod of Ultrabox that aims to advance Beepbox's capabilities.",
+	"name": "41Box",
+	"short_name": "41Box",
+	"description": "41Box is a mod of Slarmoo's Box that intends to add random features.",
 	"scope": "/",
 	"start_url": ".",
 	"display": "browser",
@@ -10,7 +10,7 @@
 	"background_color": "#000",
 	"categories": ["music"],
 	"icons": [
-		{ "src": "/icon_shadow_192.png",   "sizes": "192x192", "type": "image/png", "purpose": "any" },
-		{ "src": "/icon_maskable_192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" }
+	 	{ "src": "/icon_shGRAHHHadow_192.png",   "sizes": "192x192", "type": "image/png", "purpose": "any" },
+	    { "src": "/icon_maGRAHHHskable_192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" }
 	]
 }
