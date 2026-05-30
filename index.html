@@ -198,7 +198,7 @@
             </h1>
             
             <p id="introduction">
-                <p> 41Box is a mod of Slarmoo's Box that intends to add new rhythm options, ranging from quintuplets to 48th notes, alongside other features.
+                41Box is a mod of Slarmoo's Box that intends to add new rhythm options, ranging from quintuplets to 48th notes, alongside other features.
             </p>
             <!-- <p>
                 All song data is contained in the URL at the top of your browser.
@@ -209,6 +209,7 @@
                 If you have any questions, please visit the <a href="./faq.html">FAQ</a>. Visit the <a href="./patch_notes.html">patch notes</a> to see the latest changes made.
                 <img id="Hotdog" src="" width="500" height="333" onclick="changeHotdogSize()" />
             </p>
+            <p> If you've created a song you like, but it has corrupted because of 41Box's updates, change the URL domain to an older archived version of 41Box, as this will take you to the older version where the song is supported. (Just replace 41box-app with 41box-older_version!)</p>
     <div class="donation">
         BeepBox is a passion project, and will always be free to use. If you find it valuable and have the means, please feel free to show your gratitude to the original creator of Beepbox here: 
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -389,17 +390,94 @@
         // Randomize display of header
         
         const plants = [
-        
+        "🍂", "🌿", "🌺", "🍃", 
+        "🍄", "🍀🌷", "🌈🍂🍁🍀🌷🍄🐲🌈🍃🌺🍄",
+        "🪱",
+        "🐟",
+        "⚡","🔵","💫",
+		"🍋",
+        "✨","🌈","🌧️","🪨","🐍","🌲","🌳","𓆏","🦀","🍄‍🟫","🌵","and (not) Bobby lmaoo",
+        "🥚",
+        "🌾","🎍","🐳","🪸","🐚","🍂🍁","🪸🪸🫧🐙🐡🐠🐠🫧🐟",
+        // the ones above were more serious
+        // the ones below are 41box dedicated
+        "67box",
+        "hi lemon /assets/eeheehee",
+        'hi nulsika<img src="/assets/eeheehee">',
+        "🎷🐛",
+        "January 21 2020",
+        "like and subscribe my youtube channel",
+        "pasten likes quintuplets",
+        "why did the chicken cross the road",
+        "Slarmoo's Box 1.4.11",
+        "just make music already damn",
+        "choptop said quintuplets were impossible",
+        "improved glockenspiel",
+        "JulIsStupid",
+        "you should use bass organ",
+        "grahh",
+        "buh",
+        "theBuggys",
+        "chocolate wafers",
+        "I HATE MICROSOFT COPILOT",
+        "fsjfsafdsokf;jfssafdo",
+        "da box",
+        "da beep",
+        "it does lmao",
+        "ill make 0.00791964box eventually i swear",
+        ":mikuhi:",
+        "bro turns electricity into footsteps",
+        "imagine living on the east coast of brazil",
+        "is me",
+        "you should listen to my song at https://tinyurl.com/232wmvst",
+        "sketchy",
+        "SAXOPHONE BUG OMG",
+        "is a waffle",
         ];
         const date = new Date();
         if (Math.floor(Math.random() * 3) == 0) { //more than doubled chance for a plant to show up
             document.getElementById("plant").innerHTML = "  " + plants[(Math.floor(Math.random() * plants.length))];
-            //keeping this as a template in case i want to add plants back
-            const winterPlants = [];
+            //Slarmoo's Box (AND 41 BOX) holiday plants
+            const winterPlants = ["🎄", "🍪", "☃️", "🎁", "❄️"];
             if ((date.getDate() >= 22 && date.getDate() <= 26) && date.getMonth() == 11) {
                 document.getElementById("plant").innerHTML = "  " + winterPlants[(Math.floor(Math.random() * winterPlants.length))];
             }
+            //Slarmoo's Box Halloween plants (and 41box)
+            const spookyPlants = ["🎃", "🍬", "👻", "🐍", "🧪"];
+            if ((date.getDate() == 31) && date.getMonth() == 9) {
+                document.getElementById("plant").innerHTML = "  " + spookyPlants[(Math.floor(Math.random() * spookyPlants.length))];
+            }
+            //Slarmoo's Box valentines plants (fuck it bro all of these are 41box)
+            const heartPlants = ["❤️", "🧡", "💛", "💚", "💙", "💜"];
+            if ((date.getDate() >= 13 && date.getDate() <= 15) && date.getMonth() == 1) {
+                document.getElementById("plant").innerHTML = "  " + heartPlants[(Math.floor(Math.random() * heartPlants.length))];
+            }
+            //Slarmoo's Box pi day plants
+            if ((date.getDate() == 14) && date.getMonth() == 2) {
+                const piePlants = ["π", "🥧", "🍏", "🍋", "3.14"];
+                document.getElementById("plant").innerHTML = "  " + piePlants[(Math.floor(Math.random() * piePlants.length))];
+            }
         }
+        if ((date.getDate() == 13) && date.getMonth() == 4) {
+            const years = date.getFullYear() - 2024;
+            const birthdayPlants = [years + " year" + (years != 1 ? "s" : "") + "!", "🎂", "🎉", "Happy Birthday!", "Anniversary"];
+            document.getElementById("plant").innerHTML = "  " + birthdayPlants[(Math.floor(Math.random() * birthdayPlants.length))];
+        }
+
+        if(Math.random() * 10000 < 1) {
+            document.getElementById("plant").addEventListener("click", function (event) {
+                window.open("./macandcheese.html", "_blank");
+            })
+            const a = document.createElement("a");
+            document.getElementById("plant").innerHTML = " macaroni and cheese";
+            document.getElementById("plant").style.color = "#bb8822";
+        }
+
+        if(document.getElementById("plant").innerText.includes("🐲")) {
+            document.getElementById("plant").addEventListener("mouseover", function (event) {
+                document.getElementById("plant").innerText = " 🌈🍂🍁🍀🌷🍄🐍🌈🍃🌺🍄";
+            }, { once: true })
+        } 
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent)) {
             document.getElementById("introduction").innerHTML = "41Box is an online tool for sketching and sharing chiptune melodies. Make sure that your volume is turned up, then press the play button!";
